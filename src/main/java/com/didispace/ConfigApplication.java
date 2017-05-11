@@ -6,11 +6,11 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @EnableConfigServer
 @SpringBootApplication
-public class Application {
+public class ConfigApplication {
 
 	public static void main(String[] args) {
 		long starTime = System.currentTimeMillis();
-		new SpringApplicationBuilder(Application.class).web(true).run(args);
+		new SpringApplicationBuilder(ConfigApplication.class).web(true).run(args);
 		long endTime = System.currentTimeMillis();
 		long time = endTime - starTime;
 		System.out.println("\nStart Time: " + time / 1000 + " s");
